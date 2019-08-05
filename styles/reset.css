@@ -1,0 +1,26 @@
+html, body, section, div, ul, li, span, p, img, input, form, a, h1, h2, h3, textarea {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: inherit;
+  font: inherit;
+  text-decoration: inherit;
+  text-align: inherit;
+  color: inherit;
+  background: transparent;
+}
+
+li {
+  list-style: none;
+}
+
+button, input[type="submit"] {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  width: 100%;
+  margin: auto;
+}

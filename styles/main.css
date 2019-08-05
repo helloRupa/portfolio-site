@@ -1,0 +1,415 @@
+:root {
+  --main-font-color: #000;
+  --h1-color: #000;
+  --h2-color: #000;
+  --navy: #110769;
+  --off-white: #f2f1ff;
+  --orange: #F7623D;
+  --purple: #5E0A80;
+  --dark-purple: #550544;
+  --white: #fff;
+  --web-bg-color: aliceblue;
+  --main-spacing: 30px;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--main-font-color);
+  line-height: 1.5;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+section {
+  padding: 100px 15px;
+  margin: 0 auto;
+}
+
+h1, h2, h3 {
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+h1, h2 {
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 36px;
+  letter-spacing: 1px;
+}
+
+h2 {
+  color: var(--h2-color);
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+h2:after {
+  content: "";
+  display: block;
+  width: 66%;
+  height: 2px;
+  background-color: black;
+  margin: 16px 0 36px 0;
+}
+
+.contact h2:after {
+  background-color: var(--off-white);
+}
+
+h3 {
+  font-weight: 700;
+  color: var(--main-font-color);
+}
+
+p {
+  margin: 16px 0;
+}
+
+i {
+  margin-right: 5px;
+}
+
+a {
+  color: var(--dark-purple);
+}
+
+.intro {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 60px;
+  background-color: var(--navy);
+  color: var(--white);
+  text-align: center;
+}
+
+.profile-image {
+  width: 300px;
+  margin: 30px auto;
+}
+
+.skills {
+  text-transform: uppercase;
+  padding: 10px 0;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.skills li {
+  display: inline-block;
+}
+
+.skills li:after {
+  content: "/";
+  padding-left: 5px;
+}
+
+.skills li:last-of-type:after {
+  content: "";
+}
+
+.location {
+  background-color: var(--white);
+  color: var(--navy);
+  padding: 2px 15px;
+  opacity: 0.85;
+  display: inline-block;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 36px;
+}
+
+.hidden-label {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+.projects {
+  margin-bottom: 0;
+}
+
+.project {
+  background-color: var(--white);
+  margin-bottom: 60px;
+}
+
+.details {
+  padding: 30px;
+}
+
+.project-links {
+  margin: 16px 0;
+}
+
+.project-links li {
+  display: inline-block;
+  margin-right: 16px;
+}
+
+.tools, .toolbox ul {
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+}
+
+.tools li, .toolbox li {
+  padding: 10px;
+}
+
+.tools img {
+  width: 28px;
+}
+
+.tools i {
+  font-size: 28px;
+}
+
+.toolbox img {
+  width: 60px;
+}
+
+.toolbox i {
+  font-size: 60px;
+}
+
+.project-image iframe, .project-image object, .project-image embed {
+  width: 100%;
+  height: 100%;
+  min-height: 250px;
+}
+
+.web {
+  background-color: var(--purple);
+}
+
+.web h2 {
+  color: var(--white);
+}
+
+.web h2:after {
+  background-color: var(--white);
+}
+
+.games {
+  background-color: var(--white);
+}
+
+.games .project {
+  border: 1px solid #e1e1e1;
+}
+
+.art {
+  background-color: var(--dark-purple);
+}
+
+.art h2 {
+  color: var(--white);
+}
+
+.art h2:after {
+  background-color: var(--white);
+}
+
+.contact {
+  background-color: var(--navy);
+  margin-bottom: 0;
+  color: var(--off-white);
+}
+
+.contact h2 {
+  color: var(--off-white);
+}
+
+input[type="text"], textarea {
+  background-color: var(--white);
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 30px;
+  background-color: rgba(255,255,255,0.15);
+  border-bottom: 1px solid var(--white);
+}
+
+textarea {
+  height: 200px;
+}
+
+input[type="submit"] {
+  font-size: 24px;
+  text-transform: uppercase;
+  background-color: var(--orange);
+  color: var(--white);
+  padding: 5px 30px;
+  font-weight: bold;
+}
+
+#thanks {
+  margin: 30px 0;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+::placeholder {
+  color: var(--white);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: var(--white);
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+ color: var(--white);
+}
+
+.project-image {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.home-link a {
+  color: var(--white);
+  text-transform: uppercase;
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  font-size: 18px;
+}
+
+@media all and (min-width: 365px) {
+  .web .project:nth-of-type(2) .project-image img, 
+  .web .project:first-of-type .project-image img {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+@media all and (min-width: 450px) {
+  section {
+    padding: 100px 30px;
+  }
+
+  .web .project-image img {
+    position: absolute;
+    top: -25%;
+  }
+
+  .web .project:nth-of-type(2) .project-image img, 
+  .web .project:first-of-type .project-image img {
+    bottom: 0;
+  }
+}
+
+@media all and (min-width: 550px) {
+  section {
+    padding: 100px 60px;
+  }
+
+  .web .project-image img {
+    top: -35%;
+  }
+
+  .web .project:nth-of-type(2) .project-image img, 
+  .web .project:first-of-type .project-image img {
+    bottom: 0;
+  }
+}
+
+@media all and (min-width: 580px) {
+  .web .project-image img {
+    top: -40%;
+  }
+
+  .web .project:nth-of-type(2) .project-image img, 
+  .web .project:first-of-type .project-image img {
+    bottom: 0;
+  }
+}
+
+@media all and (min-width: 650px) {
+  section {
+    padding: 100px 30px;
+  }
+
+  .web .project-image img,
+  .web .project:nth-of-type(2) .project-image img, 
+  .web .project:first-of-type .project-image img {
+    position: relative;
+    top: 0;
+  }
+
+  .about p {
+    padding: 0 16px;
+  }
+
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+  }
+
+  .project {
+    width: 49%;
+  }
+
+  .tools img {
+    width: 36px;
+  }
+  
+  .tools i {
+    font-size: 36px;
+  }
+}
+
+@media all and (min-width: 680px) {
+  .web .project:nth-of-type(2) .project-image img, 
+  .web .project:first-of-type .project-image img {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+@media all and (min-width: 850px) {
+  section {
+    padding: 100px 60px;
+  }
+
+  .toolbox i {
+    font-size: 80px;
+  }
+
+  .toolbox img {
+    width: 80px;
+  }
+}
+
+@media all and (min-width: 1000px) {
+  .project {
+    width: 32%;
+  }
+
+  .web .project:nth-of-type(2), .web .project:first-of-type, .art .project {
+    width: 49%;
+  }
+}
