@@ -297,6 +297,22 @@ input[type="submit"] {
   font-size: 18px;
 }
 
+.fa-react {
+  color: #61dafb;
+}
+
+.fa-js-square {
+  color: #ffd600;
+}
+
+.fa-html5 {
+  color: #E44C27;
+}
+
+.fa-css3-alt {
+  color: #2B64F1;
+}
+
 @media all and (min-width: 365px) {
   .web .project:nth-of-type(2) .project-image img, 
   .web .project:first-of-type .project-image img {
