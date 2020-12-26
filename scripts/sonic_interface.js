@@ -95,17 +95,38 @@ const rotationFunctions = [
   rotateWholePie,
 ];
 
-const rotate = function () {
-  timers.all = setInterval(() => {
-    ++timers.tick;
-    rotationFunctions.forEach((func) => func());
+// const rotate = function () {
+//   timers.all = setInterval(() => {
+//     ++timers.tick;
+//     rotationFunctions.forEach((func) => func());
 
-    for (const key in rotationValues) {
-      setRotation(rotationValues[key][0], rotationValues[key][1]);
-    }
-  }, 10);
+//     for (const key in rotationValues) {
+//       setRotation(rotationValues[key][0], rotationValues[key][1]);
+//     }
+//   }, 10);
+// };
+
+// const stopRotate = function () {
+//   clearInterval(timers.all);
+// };
+
+let start;
+
+const step = function (timestamp) {
+  if (start === undefined) {
+    start = timestamp;
+  }
+
+  ++timers.tick;
+  rotationFunctions.forEach((func) => func());
+
+  for (const key in rotationValues) {
+    setRotation(rotationValues[key][0], rotationValues[key][1]);
+  }
+
+  timers.all = window.requestAnimationFrame(step);
 };
 
-const stopRotate = function () {
-  clearInterval(timers.all);
+const stopAnimation = function () {
+  window.cancelAnimationFrame(timers.all);
 };
