@@ -5,6 +5,16 @@
   background-color: #040113;
 }
 
+.whole-pie {
+  background-image: url("../img/sonic_circles/whole_pie.svg");
+  position: absolute;
+  bottom: 20%;
+  left: 16%;
+  width: 15%;
+  height: 15%;
+  filter: saturate(0) brightness(150%);
+}
+
 .background-no-repeat {
   background-repeat: no-repeat;
   background-position: center;
@@ -20,10 +30,37 @@
 }
 
 .circles {
-  width: 432px;
-  height: 432px;
-  /* height: 503px; */
+  width: 350px;
+  height: 350px;
   z-index: 10;
+}
+
+.circles::after {
+  content: "";
+  width: 1px;
+  height: 120%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border-right: 1px dashed #6f6f6f;
+  z-index: -1;
+}
+
+.circles::before {
+  content: "";
+  width: 120%;
+  height: 1px;
+  position: absolute;
+  left: -10%;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border-bottom: 1px dashed #6f6f6f;
+  z-index: -1;
 }
 
 .small-circle {
@@ -41,7 +78,7 @@
   z-index: inherit;
 }
 
-.outer-circles:nth-of-type(2) {
+.outer-circles+.outer-circles {
   background-image: url("../img/sonic_circles/outer_circle_small.svg");
   width: 92%;
   height: 92%;
@@ -51,12 +88,13 @@
   width: 85.75%;
   height: 85.75%;
   border-radius: 50%;
-  border: 1px solid #ffffff29;
+  border: 1px dashed #ffffff29;
 }
 
 .shape-container {
   transform-origin: bottom center;
   bottom: unset;
+  z-index: 1;
 }
 
 .arch-container-med {
@@ -145,4 +183,18 @@
   height: 58%;
   position: absolute;
   bottom: 0;
+}
+
+@media all and (min-width: 750px) {
+  .circles {
+    width: 450px;
+    height: 450px;
+  }
+}
+
+@media all and (min-width: 900px) {
+  .circles {
+    width: 500px;
+    height: 500px;
+  }
 }
