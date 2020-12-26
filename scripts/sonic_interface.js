@@ -16,66 +16,63 @@ const rotationValues = {
 const timers = {
   all: null,
   tick: 0,
+  start: 0,
+};
+
+const resetRotation = function (key) {
+  if (rotationValues[key][1] > Math.abs(360)) {
+    rotationValues[key][1] = 0;
+  }
 };
 
 const rotateInnerCircle = function () {
-  if (timers.tick % 4 === 0) {
-    ++rotationValues.innerCircle[1];
-  }
+  rotationValues.innerCircle[1] += 0.5;
+  resetRotation("innerCircle");
 };
 
 const rotateOuterCircle = function () {
-  if (timers.tick % 8 === 0) {
-    --rotationValues.outerCircle[1];
-  }
+  rotationValues.outerCircle[1] -= 0.75;
+  resetRotation("outerCircle");
 };
 
 const rotateOrangeArc = function () {
-  if (timers.tick % 2 === 0) {
-    --rotationValues.orangeArc[1];
-  }
+  rotationValues.orangeArc[1] -= 0.5;
+  resetRotation("orangeArc");
 };
 
 const rotateWhiteArcMed = function () {
-  if (timers.tick % 3 === 0) {
-    ++rotationValues.whiteArcMed[1];
-  }
+  rotationValues.whiteArcMed[1] += 0.33;
+  resetRotation("whiteArcMed");
 };
 
 const rotateWhiteArcLong = function () {
-  if (timers.tick % 5 === 0) {
-    --rotationValues.whiteArcLong[1];
-  }
+  rotationValues.whiteArcLong[1] -= 0.2;
+  resetRotation("whiteArcLong");
 };
 
 const rotateBluePieLarge = function () {
-  if (timers.tick % 5 === 0) {
-    --rotationValues.bluePieLarge[1];
-  }
+  rotationValues.bluePieLarge[1] += 0.4;
+  resetRotation("bluePieLarge");
 };
 
 const rotateBlackPie = function () {
-  if (timers.tick % 2 === 0) {
-    ++rotationValues.blackPie[1];
-  }
+  rotationValues.blackPie[1] += 0.75;
+  resetRotation("blackPie");
 };
 
 const rotateBluePieThin = function () {
-  if (timers.tick % 2 === 0) {
-    --rotationValues.bluePieThin[1];
-  }
+  rotationValues.bluePieThin[1] -= 0.5;
+  resetRotation("bluePieThin");
 };
 
 const rotateBluePieSmall = function () {
-  if (timers.tick % 1 === 0) {
-    ++rotationValues.bluePieSmall[1];
-  }
+  ++rotationValues.bluePieSmall[1];
+  resetRotation("bluePieSmall");
 };
 
 const rotateWholePie = function () {
-  if (timers.tick % 1 === 0) {
-    ++rotationValues.wholePie[1];
-  }
+  ++rotationValues.wholePie[1];
+  resetRotation("wholePie");
 };
 
 const setRotation = function (el, value) {
@@ -110,15 +107,14 @@ const rotationFunctions = [
 //   clearInterval(timers.all);
 // };
 
-let start;
-
 const step = function (timestamp) {
-  if (start === undefined) {
-    start = timestamp;
-  }
+  // ++timers.tick;
 
-  ++timers.tick;
-  rotationFunctions.forEach((func) => func());
+  const elapsed = timestamp - timers.start;
+
+  if (elapsed) {
+    rotationFunctions.forEach((func) => func(elapsed));
+  }
 
   for (const key in rotationValues) {
     setRotation(rotationValues[key][0], rotationValues[key][1]);
