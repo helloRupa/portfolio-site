@@ -1,0 +1,148 @@
+.sound-machine {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #040113;
+}
+
+.background-no-repeat {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.absolute-center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.circles {
+  width: 432px;
+  height: 432px;
+  /* height: 503px; */
+  z-index: 10;
+}
+
+.small-circle {
+  background-color: #c0c8cc;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  z-index: 100;
+}
+
+.outer-circles {
+  background-image: url("../img/sonic_circles/outer_circle_large.svg");
+  width: 100%;
+  height: 100%;
+  z-index: inherit;
+}
+
+.outer-circles:nth-of-type(2) {
+  background-image: url("../img/sonic_circles/outer_circle_small.svg");
+  width: 92%;
+  height: 92%;
+}
+
+.slice-container {
+  width: 85.75%;
+  height: 85.75%;
+  border-radius: 50%;
+  border: 1px solid #ffffff29;
+}
+
+.shape-container {
+  transform-origin: bottom center;
+  bottom: unset;
+}
+
+.arch-container-med {
+  width: 40%;
+  height: 50%;
+  rotate: -22deg;
+}
+
+.arch-white-medium {
+  background-image: url("../img/sonic_circles/arch_white_medium.svg");
+  width: 100%;
+  height: 20%;
+}
+
+.arch-container-orange {
+  width: 44.5%;
+  height: 50%;
+  rotate: 46deg;
+}
+
+.arch-orange {
+  background-image: url("../img/sonic_circles/arch_orange.svg");
+  width: 100%;
+  height: 56%;
+}
+
+.arch-container-long {
+  width: 55%;
+  height: 50%;
+  rotate: -149deg;
+}
+
+.arch-long {
+  background-image: url("../img/sonic_circles/arch_white_long.svg");
+  width: 100%;
+  height: 23%;
+}
+
+.pie-container-large {
+  width: 42.7%;
+  height: 50%;
+  rotate: 88.4deg;
+}
+
+.pie-large {
+  background-image: url("../img/sonic_circles/pie_blue_large.svg");
+  width: 100%;
+  height: 100%;
+}
+
+.pie-container-black {
+  width: 42.7%;
+  height: 50%;
+  rotate: 151.4deg;
+}
+
+.pie-black {
+  background-image: url("../img/sonic_circles/pie_black.svg");
+  width: 100%;
+  height: 100%;
+}
+
+.pie-container-blue-thin {
+  width: 42.7%;
+  height: 50%;
+  rotate: 222.4deg;
+}
+
+.pie-blue-thin {
+  background-image: url("../img/sonic_circles/pie_blue_thin.svg");
+  width: 100%;
+  height: 76%;
+  position: absolute;
+  bottom: 0;
+}
+
+.pie-container-blue-small {
+  width: 42.7%;
+  height: 50%;
+  rotate: 319.4deg;
+}
+
+.pie-blue-small {
+  background-image: url("../img/sonic_circles/pie_blue_small.svg");
+  width: 100%;
+  height: 58%;
+  position: absolute;
+  bottom: 0;
+}
