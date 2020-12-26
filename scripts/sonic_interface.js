@@ -15,7 +15,7 @@ const rotationValues = {
 
 const timers = {
   all: null,
-  lastTime: 0,
+  lastTime: null,
 };
 
 const resetRotation = function (key) {
@@ -92,7 +92,7 @@ const rotationFunctions = [
 ];
 
 const step = function (timestamp) {
-  const dt = (timestamp || 0) - timers.lastTime;
+  const dt = (timestamp || 0) - (timers.lastTime || timestamp || 0);
   const divided = dt / 16;
 
   rotationFunctions.forEach((func) => func(divided));
@@ -106,5 +106,6 @@ const step = function (timestamp) {
 };
 
 const stopAnimation = function () {
+  timers.lastTime = null;
   window.cancelAnimationFrame(timers.all);
 };
