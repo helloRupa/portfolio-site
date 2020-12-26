@@ -9,10 +9,11 @@
   background-image: url("../img/sonic_circles/whole_pie.svg");
   position: absolute;
   bottom: 20%;
-  left: 16%;
+  left: 7%;
   width: 15%;
   height: 15%;
   filter: saturate(0) brightness(150%);
+  z-index: 1;
 }
 
 .background-no-repeat {
