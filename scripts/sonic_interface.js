@@ -15,6 +15,7 @@ const rotationValues = {
 
 const timers = {
   all: null,
+  lastTime: 0,
 };
 
 const resetRotation = function (key) {
@@ -23,53 +24,53 @@ const resetRotation = function (key) {
   }
 };
 
-const rotateInnerCircle = function () {
-  rotationValues.innerCircle[1] += 0.55;
+const rotateInnerCircle = function (dt) {
+  rotationValues.innerCircle[1] += Math.min(dt / 30, 0.55);
   resetRotation("innerCircle");
 };
 
-const rotateOuterCircle = function () {
-  rotationValues.outerCircle[1] -= 0.25;
+const rotateOuterCircle = function (dt) {
+  rotationValues.outerCircle[1] -= Math.min(dt / 60, 0.25);
   resetRotation("outerCircle");
 };
 
-const rotateOrangeArc = function () {
-  rotationValues.orangeArc[1] -= 0.85;
+const rotateOrangeArc = function (dt) {
+  rotationValues.orangeArc[1] -= Math.min(dt / 20, 0.85);
   resetRotation("orangeArc");
 };
 
-const rotateWhiteArcMed = function () {
-  rotationValues.whiteArcMed[1] += 0.33;
+const rotateWhiteArcMed = function (dt) {
+  rotationValues.whiteArcMed[1] += Math.min(dt / 40, 0.33);
   resetRotation("whiteArcMed");
 };
 
-const rotateWhiteArcLong = function () {
-  rotationValues.whiteArcLong[1] -= 0.2;
+const rotateWhiteArcLong = function (dt) {
+  rotationValues.whiteArcLong[1] -= Math.min(dt / 65, 0.2);
   resetRotation("whiteArcLong");
 };
 
-const rotateBluePieLarge = function () {
-  rotationValues.bluePieLarge[1] += 0.55;
+const rotateBluePieLarge = function (dt) {
+  rotationValues.bluePieLarge[1] += Math.min(dt / 30, 0.55);
   resetRotation("bluePieLarge");
 };
 
-const rotateBlackPie = function () {
-  rotationValues.blackPie[1] += 1.1;
+const rotateBlackPie = function (dt) {
+  rotationValues.blackPie[1] += Math.min(dt / 16, 1.1);
   resetRotation("blackPie");
 };
 
-const rotateBluePieThin = function () {
-  rotationValues.bluePieThin[1] -= 0.65;
+const rotateBluePieThin = function (dt) {
+  rotationValues.bluePieThin[1] -= Math.min(dt / 25, 0.65);
   resetRotation("bluePieThin");
 };
 
-const rotateBluePieSmall = function () {
-  ++rotationValues.bluePieSmall[1];
+const rotateBluePieSmall = function (dt) {
+  rotationValues.bluePieSmall[1] += Math.min(dt / 18, 1);
   resetRotation("bluePieSmall");
 };
 
-const rotateWholePie = function () {
-  rotationValues.wholePie[1] += 1.25;
+const rotateWholePie = function (dt) {
+  rotationValues.wholePie[1] += Math.min(dt / 14, 1.25);
   resetRotation("wholePie");
 };
 
@@ -91,7 +92,10 @@ const rotationFunctions = [
 ];
 
 const step = function (timestamp) {
-  rotationFunctions.forEach((func) => func());
+  const dt = (timestamp || 0) - timers.lastTime;
+
+  rotationFunctions.forEach((func) => func(dt));
+  timers.lastTime = timestamp || 0;
 
   for (const key in rotationValues) {
     setRotation(rotationValues[key][0], rotationValues[key][1]);
