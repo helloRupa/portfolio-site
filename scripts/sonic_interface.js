@@ -25,52 +25,52 @@ const resetRotation = function (key) {
 };
 
 const rotateInnerCircle = function (dt) {
-  rotationValues.innerCircle[1] += Math.min(dt / 30, 0.55);
+  rotationValues.innerCircle[1] += dt * 0.55;
   resetRotation("innerCircle");
 };
 
 const rotateOuterCircle = function (dt) {
-  rotationValues.outerCircle[1] -= Math.min(dt / 60, 0.25);
+  rotationValues.outerCircle[1] -= dt * 0.25;
   resetRotation("outerCircle");
 };
 
 const rotateOrangeArc = function (dt) {
-  rotationValues.orangeArc[1] -= Math.min(dt / 20, 0.85);
+  rotationValues.orangeArc[1] -= dt * 0.85;
   resetRotation("orangeArc");
 };
 
 const rotateWhiteArcMed = function (dt) {
-  rotationValues.whiteArcMed[1] += Math.min(dt / 40, 0.33);
+  rotationValues.whiteArcMed[1] += dt * 0.33;
   resetRotation("whiteArcMed");
 };
 
 const rotateWhiteArcLong = function (dt) {
-  rotationValues.whiteArcLong[1] -= Math.min(dt / 65, 0.2);
+  rotationValues.whiteArcLong[1] -= dt * 0.2;
   resetRotation("whiteArcLong");
 };
 
 const rotateBluePieLarge = function (dt) {
-  rotationValues.bluePieLarge[1] += Math.min(dt / 30, 0.55);
+  rotationValues.bluePieLarge[1] += dt * 0.55;
   resetRotation("bluePieLarge");
 };
 
 const rotateBlackPie = function (dt) {
-  rotationValues.blackPie[1] += Math.min(dt / 16, 1.1);
+  rotationValues.blackPie[1] += dt * 1.1;
   resetRotation("blackPie");
 };
 
 const rotateBluePieThin = function (dt) {
-  rotationValues.bluePieThin[1] -= Math.min(dt / 25, 0.65);
+  rotationValues.bluePieThin[1] -= dt * 0.65;
   resetRotation("bluePieThin");
 };
 
 const rotateBluePieSmall = function (dt) {
-  rotationValues.bluePieSmall[1] += Math.min(dt / 18, 1);
+  rotationValues.bluePieSmall[1] += dt * 1;
   resetRotation("bluePieSmall");
 };
 
 const rotateWholePie = function (dt) {
-  rotationValues.wholePie[1] += Math.min(dt / 14, 1.25);
+  rotationValues.wholePie[1] += dt * 1.25;
   resetRotation("wholePie");
 };
 
@@ -93,8 +93,9 @@ const rotationFunctions = [
 
 const step = function (timestamp) {
   const dt = (timestamp || 0) - timers.lastTime;
+  const divided = dt / 16;
 
-  rotationFunctions.forEach((func) => func(dt));
+  rotationFunctions.forEach((func) => func(divided));
   timers.lastTime = timestamp || 0;
 
   for (const key in rotationValues) {
