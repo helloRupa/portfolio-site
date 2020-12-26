@@ -100,7 +100,7 @@
 .arch-container-med {
   width: 40%;
   height: 50%;
-  rotate: -22deg;
+  transform: rotate(-22deg);
 }
 
 .arch-white-medium {
@@ -112,7 +112,7 @@
 .arch-container-orange {
   width: 44.5%;
   height: 50%;
-  rotate: 46deg;
+  transform: rotate(46deg);
 }
 
 .arch-orange {
@@ -124,7 +124,7 @@
 .arch-container-long {
   width: 55%;
   height: 50%;
-  rotate: -149deg;
+  transform: rotate(-149deg);
 }
 
 .arch-long {
@@ -136,7 +136,7 @@
 .pie-container-large {
   width: 42.7%;
   height: 50%;
-  rotate: 88.4deg;
+  transform: rotate(88.4deg);
 }
 
 .pie-large {
@@ -148,7 +148,7 @@
 .pie-container-black {
   width: 42.7%;
   height: 50%;
-  rotate: 151.4deg;
+  transform: rotate(151.4deg);
 }
 
 .pie-black {
@@ -160,7 +160,7 @@
 .pie-container-blue-thin {
   width: 42.7%;
   height: 50%;
-  rotate: 222.4deg;
+  transform: rotate(222.4deg);
 }
 
 .pie-blue-thin {
@@ -174,7 +174,7 @@
 .pie-container-blue-small {
   width: 42.7%;
   height: 50%;
-  rotate: 319.4deg;
+  transform: rotate(319.4deg);
 }
 
 .pie-blue-small {

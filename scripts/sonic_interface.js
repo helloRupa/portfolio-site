@@ -76,7 +76,7 @@ const rotateWholePie = function () {
 };
 
 const setRotation = function (el, value) {
-  el.style.rotate = `${value}deg`;
+  el.style.transform = `rotate(${value}deg)`;
 };
 
 const rotationFunctions = [
