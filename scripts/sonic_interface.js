@@ -8,8 +8,8 @@ const rotationValues = {
   blackPie: [document.querySelector(".pie-container-black"), 151.4],
   bluePieThin: [document.querySelector(".pie-container-blue-thin"), 222.4],
   bluePieSmall: [document.querySelector(".pie-container-blue-small"), 319.4],
-  outerCircle: [outerCircles[1], 0],
-  innerCircle: [outerCircles[0], 0],
+  outerCircle: [outerCircles[0], 0],
+  innerCircle: [outerCircles[1], 0],
   wholePie: [document.querySelector(".whole-pie"), 0],
 };
 
@@ -24,17 +24,17 @@ const resetRotation = function (key) {
 };
 
 const rotateInnerCircle = function () {
-  rotationValues.innerCircle[1] += 0.5;
+  rotationValues.innerCircle[1] += 0.55;
   resetRotation("innerCircle");
 };
 
 const rotateOuterCircle = function () {
-  rotationValues.outerCircle[1] -= 0.75;
+  rotationValues.outerCircle[1] -= 0.25;
   resetRotation("outerCircle");
 };
 
 const rotateOrangeArc = function () {
-  rotationValues.orangeArc[1] -= 0.5;
+  rotationValues.orangeArc[1] -= 0.85;
   resetRotation("orangeArc");
 };
 
@@ -49,17 +49,17 @@ const rotateWhiteArcLong = function () {
 };
 
 const rotateBluePieLarge = function () {
-  rotationValues.bluePieLarge[1] += 0.4;
+  rotationValues.bluePieLarge[1] += 0.55;
   resetRotation("bluePieLarge");
 };
 
 const rotateBlackPie = function () {
-  rotationValues.blackPie[1] += 0.75;
+  rotationValues.blackPie[1] += 1.1;
   resetRotation("blackPie");
 };
 
 const rotateBluePieThin = function () {
-  rotationValues.bluePieThin[1] -= 0.5;
+  rotationValues.bluePieThin[1] -= 0.65;
   resetRotation("bluePieThin");
 };
 
@@ -69,7 +69,7 @@ const rotateBluePieSmall = function () {
 };
 
 const rotateWholePie = function () {
-  ++rotationValues.wholePie[1];
+  rotationValues.wholePie[1] += 1.25;
   resetRotation("wholePie");
 };
 
