@@ -15,8 +15,6 @@ const rotationValues = {
 
 const timers = {
   all: null,
-  tick: 0,
-  start: 0,
 };
 
 const resetRotation = function (key) {
@@ -92,29 +90,8 @@ const rotationFunctions = [
   rotateWholePie,
 ];
 
-// const rotate = function () {
-//   timers.all = setInterval(() => {
-//     ++timers.tick;
-//     rotationFunctions.forEach((func) => func());
-
-//     for (const key in rotationValues) {
-//       setRotation(rotationValues[key][0], rotationValues[key][1]);
-//     }
-//   }, 10);
-// };
-
-// const stopRotate = function () {
-//   clearInterval(timers.all);
-// };
-
 const step = function (timestamp) {
-  // ++timers.tick;
-
-  const elapsed = timestamp - timers.start;
-
-  if (elapsed) {
-    rotationFunctions.forEach((func) => func(elapsed));
-  }
+  rotationFunctions.forEach((func) => func());
 
   for (const key in rotationValues) {
     setRotation(rotationValues[key][0], rotationValues[key][1]);
