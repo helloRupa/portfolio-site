@@ -1,9 +1,9 @@
 const outerCircles = document.querySelectorAll(".outer-circles");
-
+// el, starting angle, speed
 const rotationValues = {
   orangeArc: [document.querySelector(".arch-container-orange"), 46, -0.85],
   whiteArcMed: [document.querySelector(".arch-container-med"), -22, 0.33],
-  whiteArcLong: [document.querySelector(".arch-container-long"), -149, -0.2],
+  whiteArcLong: [document.querySelector(".arch-container-long"), -149, -0.35],
   bluePieLarge: [document.querySelector(".pie-container-large"), 88.4, 0.55],
   blackPie: [document.querySelector(".pie-container-black"), 151.4, 1.1],
   bluePieThin: [
@@ -12,7 +12,7 @@ const rotationValues = {
     -0.65,
   ],
   bluePieSmall: [document.querySelector(".pie-container-blue-small"), 319.4, 1],
-  outerCircle: [outerCircles[0], 0, -0.25],
+  outerCircle: [outerCircles[0], 0, -0.22],
   innerCircle: [outerCircles[1], 0, 0.55],
   wholePie: [document.querySelector(".whole-pie"), 0, 1.25],
 };
