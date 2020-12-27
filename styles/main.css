@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap');
+
 :root {
   --main-font-color: #000;
   --h1-color: #000;
@@ -22,16 +24,34 @@ body {
   box-sizing: border-box;
 }
 
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 15px;
+  color: var(--off-white);
+  z-index: 100;
+}
+
+header h1 {
+  text-transform: uppercase;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 1.75em;
+}
+
 section {
   padding: 100px 15px;
   margin: 0 auto;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: 'Red Hat Display', sans-serif;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-weight: 400;
 }
 
@@ -93,7 +113,6 @@ a {
 
 .skills {
   text-transform: uppercase;
-  padding: 10px 0;
   font-size: 14px;
   letter-spacing: 1px;
   margin-bottom: 12px;
@@ -164,13 +183,15 @@ a {
   margin-right: 16px;
 }
 
-.tools, .toolbox ul {
+.tools,
+.toolbox ul {
   display: flex;
   justify-content: center;
   flex-flow: wrap;
 }
 
-.tools li, .toolbox li {
+.tools li,
+.toolbox li {
   padding: 10px;
 }
 
@@ -190,7 +211,9 @@ a {
   font-size: 60px;
 }
 
-.project-image iframe, .project-image object, .project-image embed {
+.project-image iframe,
+.project-image object,
+.project-image embed {
   width: 100%;
   height: 100%;
   min-height: 250px;
@@ -238,13 +261,14 @@ a {
   color: var(--off-white);
 }
 
-input[type="text"], textarea {
+input[type="text"],
+textarea {
   background-color: var(--white);
   display: block;
   width: 100%;
   padding: 10px;
   margin-bottom: 30px;
-  background-color: rgba(255,255,255,0.15);
+  background-color: rgba(255, 255, 255, 0.15);
   border-bottom: 1px solid var(--white);
 }
 
@@ -271,15 +295,18 @@ input[type="submit"] {
 
 ::placeholder {
   color: var(--white);
-  opacity: 1; /* Firefox */
+  opacity: 1;
+  /* Firefox */
 }
 
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
- color: var(--white);
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: var(--white);
 }
 
-::-ms-input-placeholder { /* Microsoft Edge */
- color: var(--white);
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: var(--white);
 }
 
 .project-image {
@@ -314,7 +341,8 @@ input[type="submit"] {
 }
 
 @media all and (min-width: 365px) {
-  .web .project:nth-of-type(2) .project-image img, 
+
+  .web .project:nth-of-type(2) .project-image img,
   .web .project:first-of-type .project-image img {
     position: absolute;
     bottom: 0;
@@ -331,7 +359,7 @@ input[type="submit"] {
     top: -25%;
   }
 
-  .web .project:nth-of-type(2) .project-image img, 
+  .web .project:nth-of-type(2) .project-image img,
   .web .project:first-of-type .project-image img {
     bottom: 0;
   }
@@ -346,7 +374,7 @@ input[type="submit"] {
     top: -35%;
   }
 
-  .web .project:nth-of-type(2) .project-image img, 
+  .web .project:nth-of-type(2) .project-image img,
   .web .project:first-of-type .project-image img {
     bottom: 0;
   }
@@ -357,7 +385,7 @@ input[type="submit"] {
     top: -40%;
   }
 
-  .web .project:nth-of-type(2) .project-image img, 
+  .web .project:nth-of-type(2) .project-image img,
   .web .project:first-of-type .project-image img {
     bottom: 0;
   }
@@ -369,7 +397,7 @@ input[type="submit"] {
   }
 
   .web .project-image img,
-  .web .project:nth-of-type(2) .project-image img, 
+  .web .project:nth-of-type(2) .project-image img,
   .web .project:first-of-type .project-image img {
     position: relative;
     top: 0;
@@ -392,14 +420,15 @@ input[type="submit"] {
   .tools img {
     width: 36px;
   }
-  
+
   .tools i {
     font-size: 36px;
   }
 }
 
 @media all and (min-width: 680px) {
-  .web .project:nth-of-type(2) .project-image img, 
+
+  .web .project:nth-of-type(2) .project-image img,
   .web .project:first-of-type .project-image img {
     position: absolute;
     bottom: 0;
@@ -425,7 +454,9 @@ input[type="submit"] {
     width: 32%;
   }
 
-  .web .project:nth-of-type(2), .web .project:first-of-type, .art .project {
+  .web .project:nth-of-type(2),
+  .web .project:first-of-type,
+  .art .project {
     width: 49%;
   }
 }

@@ -1,4 +1,20 @@
-html, body, section, div, ul, li, span, p, img, input, form, a, h1, h2, h3, textarea {
+html,
+body,
+header,
+section,
+div,
+ul,
+li,
+span,
+p,
+img,
+input,
+form,
+a,
+h1,
+h2,
+h3,
+textarea {
   margin: 0;
   border: 0;
   padding: 0;
@@ -15,7 +31,8 @@ li {
   list-style: none;
 }
 
-button, input[type="submit"] {
+button,
+input[type="submit"] {
   cursor: pointer;
 }
 
