@@ -54,3 +54,19 @@ const stopAnimation = function () {
   timers.lastTime = null;
   window.cancelAnimationFrame(timers.all);
 };
+
+/* ACTION: DO THE STUFF!! */
+step();
+
+const soundSection = document.querySelector(".sound-machine");
+const scrollBoundary = soundSection.clientHeight / 2;
+
+window.addEventListener("scroll", (e) => {
+  if (window.scrollY > -1 && window.scrollY < scrollBoundary) {
+    if (!timers.lastTime) {
+      step();
+    }
+  } else {
+    stopAnimation();
+  }
+});
