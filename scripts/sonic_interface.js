@@ -70,3 +70,15 @@ const stopAnimation = function () {
 //     stopAnimation();
 //   }
 // });
+
+/* SHOW / HIDE SOUND MACHINE BASED ON LOCATION OF PROJECTS */
+const projectsSection = document.querySelector(".projects");
+const soundMachine = document.querySelector(".sound-machine");
+
+window.addEventListener("scroll", () => {
+  if (projectsSection.getBoundingClientRect().top <= 70) {
+    soundMachine.style.display = "none";
+  } else {
+    soundMachine.style.display = "block";
+  }
+});

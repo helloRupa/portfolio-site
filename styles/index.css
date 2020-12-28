@@ -24,13 +24,16 @@ section {
   letter-spacing: 1px;
 }
 
+.content {
+  background-color: var(--white);
+  color: var(--black);
+}
+
 .about {
   position: relative;
   max-width: 850px;
   padding: 0;
   margin: auto;
-  background-color: var(--white);
-  color: var(--black);
   margin-top: 100vh;
 }
 
@@ -38,6 +41,7 @@ section {
   position: relative;
   width: 90%;
   text-align: justify;
+  padding-bottom: 5em;
 }
 
 .container {
@@ -60,11 +64,27 @@ section {
 
 .section-title {
   text-transform: uppercase;
+  text-align: left;
   background-color: var(--burnt-orange);
   width: 126px;
   padding: 5px 15px;
   font-weight: 600;
   margin-top: -4em;
+}
+
+.projects {
+  background-color: var(--black);
+  z-index: 100;
+  position: relative;
+  height: 90vh;
+}
+
+.web-native .section-title {
+  background-color: #3f99ca;
+  width: 200px;
+  position: absolute;
+  top: 1em;
+  right: 30px;
 }
 
 @media all and (min-width: 400px) {
@@ -80,5 +100,6 @@ section {
     min-width: 350px;
     margin-left: 30px;
     background-color: #ffffffed;
+    margin-bottom: 60px;
   }
 }
