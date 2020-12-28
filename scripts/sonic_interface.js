@@ -76,7 +76,7 @@ const projectsSection = document.querySelector(".projects");
 const soundMachine = document.querySelector(".sound-machine");
 
 window.addEventListener("scroll", () => {
-  if (projectsSection.getBoundingClientRect().top <= 70) {
+  if (projectsSection.getBoundingClientRect().top <= 120) {
     soundMachine.style.display = "none";
   } else {
     soundMachine.style.display = "block";

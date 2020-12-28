@@ -12,6 +12,7 @@
   --web-bg-color: aliceblue;
   --main-spacing: 30px;
   --burnt-orange: #EC8B57;
+  --links: #5e7c8c;
 }
 
 body {
@@ -136,9 +137,9 @@ a {
   position: absolute;
 }
 
-.projects {
+/* .projects {
   margin-bottom: 0;
-}
+} */
 
 .project {
   background-color: var(--white);
@@ -286,7 +287,7 @@ input[type="submit"] {
 
 .project-image {
   position: relative;
-  height: 300px;
+  max-height: 300px;
   overflow: hidden;
 }
 

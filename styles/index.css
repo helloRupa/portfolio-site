@@ -45,7 +45,7 @@ section {
 }
 
 .container {
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
   padding: 16px;
 }
@@ -66,18 +66,30 @@ section {
   text-transform: uppercase;
   text-align: left;
   background-color: var(--burnt-orange);
-  width: 126px;
+  width: 138px;
   padding: 5px 15px;
   font-weight: 600;
   margin-top: -4em;
+  z-index: 10;
 }
 
 .projects {
   background-color: var(--black);
   z-index: 100;
   position: relative;
-  height: 90vh;
 }
+
+.web-native {
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+}
+
+/* .video {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+} */
 
 .web-native .section-title {
   background-color: #3f99ca;
@@ -87,10 +99,143 @@ section {
   right: 30px;
 }
 
+/* .video iframe {
+  position: absolute;
+  left: -9999px;
+  right: -9999px;
+  top: 4em;
+  margin: auto;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+   z-index: 1; 
+} */
+
+.description {
+  height: 326px;
+  background-color: var(--white);
+  padding: 15px;
+}
+
+.description h3 {
+  padding-top: 0.75em;
+}
+
+.description p {
+  text-align: justify;
+  min-height: 168px;
+}
+
+.project-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.project-links .fab,
+.project-links .fas {
+  font-size: 32px;
+  padding: 10px 10px 0 0;
+  color: var(--links);
+}
+
+.fas.fa-external-link-alt {
+  font-size: 26px;
+}
+
+.hidden {
+  display: none;
+}
+
+.controls {
+  position: absolute;
+  left: 0;
+  top: 55%;
+  width: 97%;
+  margin: auto;
+  right: 0;
+}
+
+.controls i {
+  color: var(--white);
+  z-index: 1000;
+  background-color: #0000009e;
+  font-size: 26px;
+  padding: 5px;
+  position: relative;
+}
+
+#web-left {
+  float: left;
+}
+
+#web-right {
+  float: right;
+}
+
+.overflow-hidden {
+  overflow-x: hidden;
+  position: relative;
+}
+
+.horizontal-scroll {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.projects-item {
+  flex: 0 0 90vw;
+  max-width: 325px;
+  margin-right: 30px;
+}
+
+.fa-aws {
+  color: #febd69;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollable {
+  color: var(--white);
+  position: absolute;
+  top: 15px;
+  font-size: 0.8em;
+}
+
+section.content.projects {
+  padding-bottom: 60px;
+}
+
+.art {
+  background-color: #1d1c33;
+}
+
+.art-games .section-title {
+  position: absolute;
+  top: 1em;
+  left: 45px;
+  background-color: #3a52aa;
+}
+
+@media all and (max-width: 300px) {
+  .description {
+    height: 360px;
+  }
+}
+
 @media all and (min-width: 400px) {
   .social-links {
     float: right;
     margin-top: -45px;
+  }
+}
+
+@media all and (min-width: 700px) {
+  .web-native .section-title {
+    right: 60px;
   }
 }
 
