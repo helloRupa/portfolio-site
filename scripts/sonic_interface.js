@@ -56,17 +56,17 @@ const stopAnimation = function () {
 };
 
 /* ACTION: DO THE STUFF!! */
-step();
+// step();
 
-const soundSection = document.querySelector(".sound-machine");
-const scrollBoundary = soundSection.clientHeight / 2;
+// const soundSection = document.querySelector(".sound-machine");
+// const scrollBoundary = soundSection.clientHeight / 2;
 
-window.addEventListener("scroll", (e) => {
-  if (window.scrollY > -1 && window.scrollY < scrollBoundary) {
-    if (!timers.lastTime) {
-      step();
-    }
-  } else {
-    stopAnimation();
-  }
-});
+// window.addEventListener("scroll", (e) => {
+//   if (window.scrollY > -1 && window.scrollY < scrollBoundary) {
+//     if (!timers.lastTime) {
+//       step();
+//     }
+//   } else {
+//     stopAnimation();
+//   }
+// });
