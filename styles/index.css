@@ -252,6 +252,23 @@ section.content.projects {
   right: 30px;
 }
 
+.toolbox {
+  position: relative;
+}
+
+.toolbox .section-title {
+  width: 159px;
+  position: absolute;
+  top: 1em;
+  z-index: 100;
+  right: 45px;
+  background-color: var(--black);
+}
+
+.toolbox .fa-github {
+  color: #6cc644;
+}
+
 @media all and (max-width: 300px) {
   .description {
     height: 360px;
@@ -272,6 +289,10 @@ section.content.projects {
 }
 
 @media all and (min-width: 740px) {
+  section.content.projects {
+    padding-bottom: 100px;
+  }
+
   .projects-item {
     display: flex;
     flex-direction: row;

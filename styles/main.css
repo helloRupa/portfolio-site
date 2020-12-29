@@ -137,10 +137,6 @@ a {
   position: absolute;
 }
 
-/* .projects {
-  margin-bottom: 0;
-} */
-
 .project {
   background-color: var(--white);
   margin-bottom: 60px;

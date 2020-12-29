@@ -55,30 +55,20 @@ const stopAnimation = function () {
   window.cancelAnimationFrame(timers.all);
 };
 
-/* ACTION: DO THE STUFF!! */
-// step();
-
-// const soundSection = document.querySelector(".sound-machine");
-// const scrollBoundary = soundSection.clientHeight / 2;
-
-// window.addEventListener("scroll", (e) => {
-//   if (window.scrollY > -1 && window.scrollY < scrollBoundary) {
-//     if (!timers.lastTime) {
-//       step();
-//     }
-//   } else {
-//     stopAnimation();
-//   }
-// });
-
 /* SHOW / HIDE SOUND MACHINE BASED ON LOCATION OF PROJECTS */
 const projectsSection = document.querySelector(".projects");
 const soundMachine = document.querySelector(".sound-machine");
 
+step();
+
 window.addEventListener("scroll", () => {
   if (projectsSection.getBoundingClientRect().top <= 120) {
+    stopAnimation();
     soundMachine.style.display = "none";
   } else {
+    if (!timers.lastTime) {
+      step();
+    }
     soundMachine.style.display = "block";
   }
 });
