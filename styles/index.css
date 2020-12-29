@@ -182,6 +182,8 @@ section {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
 }
 
 .projects-item {
@@ -201,7 +203,7 @@ section {
 .scrollable {
   color: var(--white);
   position: absolute;
-  top: 15px;
+  top: 45px;
   font-size: 0.8em;
 }
 
@@ -220,6 +222,11 @@ section.content.projects {
   background-color: #3a52aa;
 }
 
+.animate-opacity {
+  opacity: 0;
+  transition: opacity ease-in 1.5s;
+}
+
 @media all and (max-width: 300px) {
   .description {
     height: 360px;
@@ -236,6 +243,39 @@ section.content.projects {
 @media all and (min-width: 700px) {
   .web-native .section-title {
     right: 60px;
+  }
+}
+
+@media all and (min-width: 740px) {
+  .projects-item {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--white);
+    height: 350px;
+    max-width: 700px;
+  }
+
+  .project-image {
+    flex: 0 0 330px;
+    align-self: center;
+    max-height: unset;
+  }
+
+  .description {
+    height: 326px;
+  }
+
+  .description p {
+    min-height: 184px;
+  }
+
+  .projects-item .tools {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tools li {
+    padding: 5px 10px;
   }
 }
 
