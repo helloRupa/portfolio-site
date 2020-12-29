@@ -269,6 +269,14 @@ section.content.projects {
   color: #6cc644;
 }
 
+.toolbox .fa-python {
+  color: #FFD43B;
+}
+
+.toolbox .fa-unity {
+  color: #FFFFFF;
+}
+
 @media all and (max-width: 300px) {
   .description {
     height: 360px;
