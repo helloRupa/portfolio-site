@@ -6,7 +6,6 @@ const changeOpacity = function () {
       el.style.opacity = 1;
 
       if (el === animatedAll[animatedAll.length - 1]) {
-        console.log("removing");
         window.removeEventListener("scroll", changeOpacity);
       }
     }
