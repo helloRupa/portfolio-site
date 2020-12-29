@@ -59,7 +59,7 @@ const stopAnimation = function () {
 const projectsSection = document.querySelector(".projects");
 const soundMachine = document.querySelector(".sound-machine");
 
-step();
+setTimeout(step, 1000);
 
 window.addEventListener("scroll", () => {
   if (projectsSection.getBoundingClientRect().top <= 120) {
