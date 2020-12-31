@@ -191,6 +191,7 @@ section {
 .scrollable {
   color: var(--white);
   position: absolute;
+  left: 5%;
   top: 45px;
   font-size: 0.8em;
 }
@@ -249,7 +250,8 @@ section.content.projects {
 }
 
 .art .scrollable {
-  right: 30px;
+  left: unset;
+  right: 5%;
 }
 
 .toolbox {
