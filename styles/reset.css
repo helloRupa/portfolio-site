@@ -8,13 +8,10 @@ li,
 span,
 p,
 img,
-input,
-form,
 a,
 h1,
 h2,
-h3,
-textarea {
+h3 {
   margin: 0;
   border: 0;
   padding: 0;
@@ -31,8 +28,7 @@ li {
   list-style: none;
 }
 
-button,
-input[type="submit"] {
+button {
   cursor: pointer;
 }
 

@@ -1,16 +1,8 @@
 :root {
   --black: #040113;
-  --main-font-color: #000;
-  --h1-color: #000;
-  --h2-color: #000;
-  --navy: #110769;
   --off-white: #f2f1ff;
-  --orange: #F7623D;
-  --purple: #5E0A80;
   --dark-purple: #550544;
   --white: #fff;
-  --web-bg-color: aliceblue;
-  --main-spacing: 30px;
   --burnt-orange: #EC8B57;
   --links: #5e7c8c;
 }
@@ -19,11 +11,11 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 16px;
-  color: var(--main-font-color);
   line-height: 1.5;
   margin: auto;
   box-sizing: border-box;
   background-color: var(--black);
+  color: var(--black);
 }
 
 section {
@@ -62,13 +54,8 @@ h2:after {
   margin: 16px 0 36px 0;
 }
 
-.contact h2:after {
-  background-color: var(--off-white);
-}
-
 h3 {
   font-weight: 700;
-  color: var(--main-font-color);
 }
 
 p {
@@ -77,20 +64,6 @@ p {
 
 i {
   margin-right: 5px;
-}
-
-a {
-  color: var(--dark-purple);
-}
-
-.intro {
-  width: 100%;
-  padding-left: 0;
-  padding-right: 0;
-  padding-bottom: 60px;
-  background-color: var(--navy);
-  color: var(--white);
-  text-align: center;
 }
 
 .profile-image {
@@ -116,14 +89,6 @@ a {
 
 .skills li:last-of-type:after {
   content: "";
-}
-
-.location {
-  background-color: var(--white);
-  color: var(--navy);
-  padding: 2px 15px;
-  opacity: 0.85;
-  display: inline-block;
 }
 
 .hidden-label {
@@ -191,18 +156,6 @@ a {
   min-height: 250px;
 }
 
-.web {
-  background-color: var(--purple);
-}
-
-.web h2 {
-  color: var(--white);
-}
-
-.web h2:after {
-  background-color: var(--white);
-}
-
 .games {
   background-color: var(--white);
 }
@@ -223,62 +176,8 @@ a {
   background-color: var(--white);
 }
 
-.contact {
-  background-color: var(--navy);
-  margin-bottom: 0;
-  color: var(--off-white);
-}
-
-.contact h2 {
-  color: var(--off-white);
-}
-
-input[type="text"],
-textarea {
-  background-color: var(--white);
-  display: block;
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 30px;
-  background-color: rgba(255, 255, 255, 0.15);
-  border-bottom: 1px solid var(--white);
-}
-
-textarea {
-  height: 200px;
-}
-
-input[type="submit"] {
-  font-size: 24px;
-  text-transform: uppercase;
-  background-color: var(--orange);
-  color: var(--white);
-  padding: 5px 30px;
-  font-weight: bold;
-}
-
-#thanks {
-  margin: 30px 0;
-}
-
 .hide {
   visibility: hidden;
-}
-
-::placeholder {
-  color: var(--white);
-  opacity: 1;
-  /* Firefox */
-}
-
-:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: var(--white);
-}
-
-::-ms-input-placeholder {
-  /* Microsoft Edge */
-  color: var(--white);
 }
 
 .project-image {
