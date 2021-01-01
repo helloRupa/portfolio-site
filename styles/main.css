@@ -66,11 +66,6 @@ i {
   margin-right: 5px;
 }
 
-.profile-image {
-  width: 300px;
-  margin: 30px auto;
-}
-
 .skills {
   text-transform: uppercase;
   font-size: 14px;
@@ -100,15 +95,6 @@ i {
   overflow: hidden;
   padding: 0;
   position: absolute;
-}
-
-.project {
-  background-color: var(--white);
-  margin-bottom: 60px;
-}
-
-.details {
-  padding: 30px;
 }
 
 .project-links {
@@ -156,14 +142,6 @@ i {
   min-height: 250px;
 }
 
-.games {
-  background-color: var(--white);
-}
-
-.games .project {
-  border: 1px solid #e1e1e1;
-}
-
 .art {
   background-color: var(--dark-purple);
 }
@@ -186,15 +164,6 @@ i {
   overflow: hidden;
 }
 
-.home-link a {
-  color: var(--white);
-  text-transform: uppercase;
-  position: absolute;
-  top: 24px;
-  left: 24px;
-  font-size: 18px;
-}
-
 .fa-react {
   color: #61dafb;
 }
@@ -211,54 +180,15 @@ i {
   color: #2B64F1;
 }
 
-@media all and (min-width: 365px) {
-
-  .web .project:nth-of-type(2) .project-image img,
-  .web .project:first-of-type .project-image img {
-    position: absolute;
-    bottom: 0;
-  }
-}
-
 @media all and (min-width: 450px) {
   section {
     padding: 100px 30px;
-  }
-
-  .web .project-image img {
-    position: absolute;
-    top: -25%;
-  }
-
-  .web .project:nth-of-type(2) .project-image img,
-  .web .project:first-of-type .project-image img {
-    bottom: 0;
   }
 }
 
 @media all and (min-width: 550px) {
   section {
     padding: 100px 60px;
-  }
-
-  .web .project-image img {
-    top: -35%;
-  }
-
-  .web .project:nth-of-type(2) .project-image img,
-  .web .project:first-of-type .project-image img {
-    bottom: 0;
-  }
-}
-
-@media all and (min-width: 580px) {
-  .web .project-image img {
-    top: -40%;
-  }
-
-  .web .project:nth-of-type(2) .project-image img,
-  .web .project:first-of-type .project-image img {
-    bottom: 0;
   }
 }
 
@@ -267,25 +197,8 @@ i {
     padding: 100px 30px;
   }
 
-  .web .project-image img,
-  .web .project:nth-of-type(2) .project-image img,
-  .web .project:first-of-type .project-image img {
-    position: relative;
-    top: 0;
-  }
-
   .about p {
     padding: 0 16px;
-  }
-
-  .flex-container {
-    display: flex;
-    justify-content: space-between;
-    flex-flow: wrap;
-  }
-
-  .project {
-    width: 49%;
   }
 
   .tools img {
@@ -294,15 +207,6 @@ i {
 
   .tools i {
     font-size: 36px;
-  }
-}
-
-@media all and (min-width: 680px) {
-
-  .web .project:nth-of-type(2) .project-image img,
-  .web .project:first-of-type .project-image img {
-    position: absolute;
-    bottom: 0;
   }
 }
 
@@ -317,17 +221,5 @@ i {
 
   .toolbox img {
     width: 80px;
-  }
-}
-
-@media all and (min-width: 1000px) {
-  .project {
-    width: 32%;
-  }
-
-  .web .project:nth-of-type(2),
-  .web .project:first-of-type,
-  .art .project {
-    width: 49%;
   }
 }
