@@ -128,32 +128,6 @@ section {
   display: none;
 }
 
-.controls {
-  position: absolute;
-  left: 0;
-  top: 55%;
-  width: 97%;
-  margin: auto;
-  right: 0;
-}
-
-.controls i {
-  color: var(--white);
-  z-index: 1000;
-  background-color: #0000009e;
-  font-size: 26px;
-  padding: 5px;
-  position: relative;
-}
-
-#web-left {
-  float: left;
-}
-
-#web-right {
-  float: right;
-}
-
 .overflow-hidden {
   overflow-x: hidden;
   position: relative;

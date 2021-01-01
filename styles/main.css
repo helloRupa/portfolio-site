@@ -142,10 +142,6 @@ i {
   min-height: 250px;
 }
 
-.art {
-  background-color: var(--dark-purple);
-}
-
 .art h2 {
   color: var(--white);
 }
